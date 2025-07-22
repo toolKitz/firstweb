@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="home-page">
+    <div class="home-container">
+        <nav class="nav-bar">
+            <h1>Welcome <span id="username"></span>!</h1>
+            <a href="index.html" class="logout-btn" onclick="logout()">Logout</a>
+        </nav>
+        <div class="content">
+            <h2>Dashboard</h2>
+            <p>Welcome to your personal dashboard.</p>
+        </div>
+    </div>
+    <script>
+        // Display username
+        const username = localStorage.getItem('currentUser');
+        document.getElementById('username').textContent = username;
+
+        function logout() {
+            localStorage.removeItem('currentUser');
+        }
+    </script>
+</body>
+
+</html>

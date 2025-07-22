@@ -1,0 +1,305 @@
+body {
+    background-image: url('https://th.bing.com/th/id/R.b96aebcc5c135391dfffb041124b6390?rik=EW8rPm3rSNvagg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f06%2fHD-Pictures-Night-Sky.jpg&ehk=sVLRggXvRzQYwP8upPeGrU3TM60q4KcLxKnpuNaKBPk%3d&risl=1&pid=ImgRaw&r=0');
+    background-size: 100% 100%;
+    /* Changed to exact fitting */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    /* Added to help with centering */
+    justify-content: center;
+    /* Added to help with centering */
+    align-items: center;
+    /* Added to help with centering */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    /* Increased from 300px */
+    margin: 100px auto;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Add text color to ensure readability */
+.login-container h2,
+.login-container input::placeholder,
+.login-container label {
+    color: #ffffff;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Button animations */
+.login-container button {
+    width: 30%;
+    /* Reduced from 50% */
+    padding: 8px;
+    margin: 5px auto;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.login-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form animations */
+.login-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.login-container input {
+    transition: all 0.3s ease;
+    width: 100%;
+    /* Make input take full container width */
+    padding: 15px;
+    /* Increased padding */
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.login-container input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Define animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ripple effect for buttons */
+.login-container button::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1);
+    transition: all 0.5s ease-out;
+    top: 50%;
+    left: 50%;
+    margin-left: -25%;
+    margin-top: -25%;
+}
+
+.login-container button:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+    transform: scale(0);
+}
+
+/* Add specific styles for register button */
+#registerBtn {
+    width: 25%;
+    /* Reduced from 40% */
+    background: #007bff;
+    margin: 10px auto;
+}
+
+#registerBtn:hover {
+    background: #007bff;
+}
+
+/* Error and hint message styles */
+#loginMessage {
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#loginMessage {
+    color: #ff4d4d;
+    /* Bright red for error */
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.register-hint {
+    display: block;
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.9;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.register-hint:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Back to Login link styles */
+.login-container a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-container a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+.login-container a:active {
+    transform: translateY(0);
+}
+
+/* Welcome page styles */
+.welcome-container {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.welcome-container h1,
+.welcome-container p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: #c82333;
+}
+
+.logout-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Homepage styles */
+.home-page {
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.nav-bar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.nav-bar h1 {
+    color: #333;
+    margin: 0;
+}
+
+.content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.redirect-message {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 20px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

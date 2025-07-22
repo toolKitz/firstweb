@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h1>Welcome <span id="username"></span>!</h1>
+        <p>You have successfully logged in.</p>
+        <p class="redirect-message">Redirecting to homepage...</p>
+    </div>
+    <script>
+        // Display username
+        const username = localStorage.getItem('currentUser');
+        document.getElementById('username').textContent = username;
+
+        // Auto redirect to home page after 2 seconds
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 2000);
+    </script>
+</body>
+
+</html>
